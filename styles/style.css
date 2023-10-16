@@ -28,7 +28,7 @@ h2 {
 }
 
 body {
-    background: url(images/pexels-rehan-verma-2275222.jpg) center/cover;
+    background: url(/images/pexels-rehan-verma-2275222.jpg) center/cover;
     min-height: 100vh;
     font-family: AutourOne;
 }
