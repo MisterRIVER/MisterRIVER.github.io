@@ -1,0 +1,185 @@
+@font-face {
+    font-family: AutourOne;
+    src: url(../assets/AutourOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lobster;
+    src: url(../assets/Lobster-Regular.ttf);
+}
+
+/*l etoile sert a donner une valeur a tout les elements*/
+
+h1 {
+    text-align: center;
+    color: rgb(151, 8, 8);
+    font-size: 4.5rem;
+    letter-spacing: 5px;
+    text-shadow: 5px 5px 8px black;
+    font-family: Lobster;
+
+
+}
+
+h2 {
+
+    justify-content: space-evenly;
+    color: #ffe4c4;
+    text-align: center;
+}
+
+.addresse {
+    background-color: aqua;
+}
+
+body {
+    background: url(/images/pexels-rehan-verma-2275222.jpg) center/cover;
+    min-height: 100vh;
+    font-family: AutourOne;
+}
+
+main {
+    min-width: 400px;
+    width: 90%;
+    min-height: 800px;
+    background-color: #0000003b;
+    margin: 0 auto;
+    border: 2px solid #000000a9;
+    border-radius: 25px;
+    box-shadow: 6px 4px 12px 3px black;
+    padding: 5px;
+
+}
+
+.flexbox,
+.absolute {
+    border: 2px solid #0000003b;
+    border-radius: 25px;
+    box-shadow: 1px -1px 8px 0 #ffe4c4;
+
+}
+
+.flexbox ol {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px , auto;
+}
+
+.flexbox li {
+    list-style: none;
+    height: 100px;
+    width: 90%;
+    margin: 10px;
+    background-color: #0000005e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0000003b;
+    border-radius: 15px;
+    box-shadow: 1px -1px 3px 0 black;
+    color: bisque;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.Grid img {
+    width: 80%;
+    margin: auto;
+    display: block;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "i1 i2"
+        "ta ta"
+        "vi bt";
+        width: auto;
+        height: auto;
+}
+
+input,
+textarea {
+    margin: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: AutourOne;
+}
+
+
+textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+}
+
+#btn {
+    grid-area: bt;
+    cursor: pointer;
+    
+}
+#btn:hover {
+    background-color: #e0b0b0e3;
+}
+
+.absolute {
+    margin-top: 20px;
+    height: 100px;
+    position: relative;
+}
+
+#circle1 {
+    width: 80px;
+    height: 80px;
+    background: red;
+    position: absolute;
+    border-radius: 150px;
+    top: -20px;
+    right: -20px;
+}
+
+#circle2 {
+    height: 50px;
+    width: 50px;
+    background: black;
+    border-radius: 150px;
+    position: absolute;
+    left: 61%;
+    transform: translateX(50%);
+    top: 10%;
+}
+
+@media screen and (max-width: 900px) {
+    .grid-container {
+        display: block;
+    }
+    .grid-container img {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 550px) {
+    h2 {
+        text-align: center;
+        
+    }
+    .flexbox ol{
+flex-direction: column;
+align-items: center;
+    }
+    
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        'i1'
+        'i2'
+        'ta'
+        'bt';
+    }
+}
